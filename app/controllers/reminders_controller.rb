@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class RemindersController < ApplicationController
   # GET /reminders
   # GET /reminders.json
@@ -80,4 +82,54 @@ class RemindersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  #current location
+  def current_location 
+    latitude = params[:lat]
+    longitude = params[:long]
+
+    goog_place_url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
+    radius = 500
+
+    loc = "#{goog_place_url}?location=#{latitude},#{longitude}&radius=#{radius}&types=grocery_or_supermarket&sensor=false&key=#{GOOGLE_CONFIG['api_key']}"
+    puts '==========='
+    puts loc
+    puts '==========='
+    url = URI.parse(loc);
+    
+    # req = Net::HTTP::Get.new(url.to_s)
+    # res = Net::HTTP.start(url.host, url.port) {|http|
+    #   http.request(req)
+    # }
+
+    # puts res.body
+
+    content = open(loc).read
+
+    puts '======='
+    puts content
+    puts '======='
+
+    places = JSON.load(content)
+
+    place_array = []
+
+    places['results'].each do |r|
+      hash = {:latitude => r['geometry']['location']['lat'], 
+              :longitude => r['geometry']['location']['lng'],
+              :name => r['name']}
+      place_array.push(hash)
+    end
+
+    puts place_array.to_json
+
+    # respond_to do |format| 
+    #   format.json {render json: place_array.to_json}
+    # end
+
+    render :json => place_array.to_json
+  end
+
+
+
 end
