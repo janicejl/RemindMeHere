@@ -15,8 +15,6 @@ file.read.each_line do |line|
   name, category = line.chomp.downcase.split("|")
   name.strip!
   category.strip!
-  puts name
-  puts category
 
   Item.find_or_create_by_name(:name => name, :category => category);
 end
