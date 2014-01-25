@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Item.delete_all
+
+file = File.open("#{Rails.root}/db/seed_data/categories.txt");
+
+file.read.each_line do |line|
+  name, category = line.chomp.downcase.split("|")
+  name.strip!
+  category.strip!
+
+  Item.find_or_create_by_name(:name => name, :category => category);
+end
