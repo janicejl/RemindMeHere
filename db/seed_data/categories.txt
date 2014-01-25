@@ -53,44 +53,28 @@ fish  | Supermarket
 tuna  | Supermarket
 flounder  | Supermarket
 sugar  | Supermarket
- Pencils | Office Supplies
-paper  | Office Supplies
-ink | Office Supplies
-toner  | Office Supplies
-pens  | Office Supplies
-stapler  | Office Supplies
-staples  | Office Supplies
-paper clips  | Office Supplies
-highlighter | Office Supplies
-crayons | Office Supplies
-colored pencils | Office Supplies
-paint | Office Supplies
-lead | Office Supplies
-mechanical pencil | Office Supplies
-batteries | Office Supplies
-printer | office supplies
-batteries | electronics
-computer | electronics
-video card | electronics
-tv | electronics
-television | electronics
-printer | electronics
-ssd | electronics
-hard drive | electronics
-flash drive | electronics
-computer fan | electronics
-ink | electronics
-toner | electronics
-video games | electronics
-dvds | electronics
-movies | electronics
-cds | electronics
-Shirt | Clothes
-pants | Clothes
-socks | Clothes
-underwear | Clothes
-hat | Clothes
-gloves | Clothes
-coat | Clothes
-jacket | Clothes
-shoes | Clothes
+batteries | electronics_store
+computer | electronics_store
+video card | electronics_store
+tv | electronics_store
+television | electronics_store
+printer | electronics_store
+ssd | electronics_store
+hard drive | electronics_store
+flash drive | electronics_store
+computer fan | electronics_store
+ink | electronics_store
+toner | electronics_store
+video games | electronics_store
+dvds | electronics_store
+movies | electronics_store
+cds | electronics_store
+Shirt | department_store
+pants | department_store
+socks | department_store
+underwear | department_store
+hat | department_store
+gloves | department_store
+coat | department_store
+jacket | department_store
+shoes | department_store
