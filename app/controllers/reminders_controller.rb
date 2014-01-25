@@ -89,7 +89,7 @@ class RemindersController < ApplicationController
     longitude = params[:long]
 
     goog_place_url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
-    radius = 1500
+    radius = 500
 
     loc = "#{goog_place_url}?location=#{latitude},#{longitude}&radius=#{radius}&types=grocery_or_supermarket&sensor=false&key=#{GOOGLE_CONFIG['api_key']}"
     puts '===== Place API URI ======'
