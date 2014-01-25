@@ -89,26 +89,15 @@ class RemindersController < ApplicationController
     longitude = params[:long]
 
     goog_place_url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
-    radius = 500
+    radius = 1500
 
     loc = "#{goog_place_url}?location=#{latitude},#{longitude}&radius=#{radius}&types=grocery_or_supermarket&sensor=false&key=#{GOOGLE_CONFIG['api_key']}"
-    puts '==========='
+    puts '===== Place API URI ======'
     puts loc
-    puts '==========='
+    puts '=========================='
     url = URI.parse(loc);
-    
-    # req = Net::HTTP::Get.new(url.to_s)
-    # res = Net::HTTP.start(url.host, url.port) {|http|
-    #   http.request(req)
-    # }
-
-    # puts res.body
 
     content = open(loc).read
-
-    puts '======='
-    puts content
-    puts '======='
 
     places = JSON.load(content)
 
@@ -122,10 +111,6 @@ class RemindersController < ApplicationController
     end
 
     puts place_array.to_json
-
-    # respond_to do |format| 
-    #   format.json {render json: place_array.to_json}
-    # end
 
     render :json => place_array.to_json
   end
