@@ -6,10 +6,12 @@ class RemindersController < ApplicationController
   def index
     @reminders = Reminder.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @reminders }
-    end
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @reminders }
+    # end
+
+    render :json => @reminders.to_json
   end
 
   # GET /reminders/1
