@@ -1,0 +1,96 @@
+Apple | Supermarket
+Milk | Supermarket
+Cheese  | Supermarket
+Bananas  | Supermarket
+Oranges  | Supermarket
+Onions  | Supermarket
+Lemons  | Supermarket
+Tomatoes | Supermarket
+Eggplant  | Supermarket
+Guava  | Supermarket
+Chili  | Supermarket
+Chili Pepper  | Supermarket
+Pomegranate  | Supermarket
+Kiwi  | Supermarket
+kiwifruit  | Supermarket
+grape  | Supermarket
+cranberry  | Supermarket
+blueberry  | Supermarket
+blue berry  | Supermarket
+pumpkin  | Supermarket
+gourd  | Supermarket
+Cucumber  | Supermarket
+melon  | Supermarket
+Lime  | Supermarket
+Grapefruit  | Supermarket
+blackberry  | Supermarket
+black berry  | Supermarket
+raspberry  | Supermarket
+boysenberry  | Supermarket
+pineapple  | Supermarket
+fig  | Supermarket
+mulberry  | Supermarket
+hedge apple  | Supermarket
+strawberry  | Supermarket
+Broccoli  | Supermarket
+cabbage  | Supermarket
+celery  | Supermarket
+corn  | Supermarket
+kale  | Supermarket
+lettuce  | Supermarket
+mustard  | Supermarket
+spinach  | Supermarket
+turnip  | Supermarket
+Mayonnaise  | Supermarket
+Salt  | Supermarket
+Pepper  | Supermarket
+Cereal  | Supermarket
+meat  | Supermarket
+pork  | Supermarket
+beef  | Supermarket
+turkey  | Supermarket
+fish  | Supermarket
+tuna  | Supermarket
+flounder  | Supermarket
+sugar  | Supermarket
+ Pencils | Office Supplies
+paper  | Office Supplies
+ink | Office Supplies
+toner  | Office Supplies
+pens  | Office Supplies
+stapler  | Office Supplies
+staples  | Office Supplies
+paper clips  | Office Supplies
+highlighter | Office Supplies
+crayons | Office Supplies
+colored pencils | Office Supplies
+paint | Office Supplies
+lead | Office Supplies
+mechanical pencil | Office Supplies
+batteries | Office Supplies
+printer | office supplies
+batteries | electronics
+computer | electronics
+video card | electronics
+tv | electronics
+television | electronics
+printer | electronics
+ssd | electronics
+hard drive | electronics
+flash drive | electronics
+computer fan | electronics
+ink | electronics
+toner | electronics
+video games | electronics
+dvds | electronics
+movies | electronics
+cds | electronics
+Shirt | Clothes
+pants | Clothes
+socks | Clothes
+underwear | Clothes
+hat | Clothes
+gloves | Clothes
+coat | Clothes
+jacket | Clothes
+shoes | Clothes
