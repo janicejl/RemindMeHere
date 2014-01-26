@@ -13,5 +13,6 @@ class SessionsController < ApplicationController
   def android
     puts "In Session Android"
     user = User.from_android(params[:provider], params[:token], params[:id])
+    redirect_to root_url
   end
 end
