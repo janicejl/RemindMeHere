@@ -7,7 +7,6 @@ RemindMeHere::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'login#index'
 
-  get "login/index"
 
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
@@ -17,6 +16,7 @@ RemindMeHere::Application.routes.draw do
 
   match 'android/auth/:provider/callback/:token', to: 'sessions#android'
 
+  get "login/index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

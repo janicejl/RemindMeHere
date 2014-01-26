@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   end
 
   def self.from_android(provider, token) 
+    puts "in from_android. "
     fbuser = FbGraph::User.me(token).fetch
     user.provider = provider
     user.uid = fbuser.user_id
