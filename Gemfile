@@ -40,3 +40,5 @@ gem 'jquery-rails'
 gem 'omniauth-facebook', '1.4.0'
 
 gem 'hirb'
+
+gem 'fb_graph'

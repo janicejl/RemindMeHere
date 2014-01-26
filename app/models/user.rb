@@ -15,4 +15,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.from_android(provider, token) 
+    fbuser = FbGraph::User.me(token).fetch
+    user.provider = provider
+    user.uid = fbuser.user_id
+    user.name = fbuser.name
+    user.email = fbuser.email
+    user.oauth_token = token
+    user.oauth_expires_at = 1.week.from_now
+    user.save!
+  end
 end

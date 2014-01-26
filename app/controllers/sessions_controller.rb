@@ -9,4 +9,8 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url
   end
+
+  def android
+    user = User.from_android(params[:provider], params[:token])
+  end
 end
