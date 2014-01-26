@@ -14,7 +14,7 @@ RemindMeHere::Application.routes.draw do
 
   match 'current_location', to: 'reminders#current_location'
 
-  match 'android/auth/:provider/callback/:token', to: 'sessions#android'
+  match 'android/auth/callback', to: 'sessions#android'
 
   get "login/index"
   # The priority is based upon order of creation:

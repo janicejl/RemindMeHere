@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   end
 
   def android
-    put "In Session Android"
-    user = User.from_android(params[:provider], params[:token])
+    puts "In Session Android"
+    user = User.from_android(params[:provider], params[:token], params[:id])
   end
 end

@@ -15,11 +15,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  def self.from_android(provider, token) 
+  def self.from_android(provider, token, id) 
     puts "in from_android. "
     fbuser = FbGraph::User.me(token).fetch
+    user = User.new
     user.provider = provider
-    user.uid = fbuser.user_id
+    user.uid = id
     user.name = fbuser.name
     user.email = fbuser.email
     user.oauth_token = token
