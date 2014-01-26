@@ -49,7 +49,8 @@ class RemindersController < ApplicationController
     respond_to do |format|
       if @reminder.save
         format.html { redirect_to @reminder, notice: 'Reminder was successfully created.' }
-        format.json { render json: @reminder, status: :created, location: @reminder }
+        # format.json { render json: @reminder, status: :created, location: @reminder }
+        format.json { render :json => Reminder.all.to_json }
       else
         format.html { render action: "new" }
         format.json { render json: @reminder.errors, status: :unprocessable_entity }
@@ -81,7 +82,8 @@ class RemindersController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to reminders_url }
-      format.json { head :no_content }
+      # format.json { head :no_content }
+      format.json { render :json => Reminder.all.to_json }
     end
   end
 
