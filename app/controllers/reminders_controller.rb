@@ -102,23 +102,26 @@ class RemindersController < ApplicationController
     goog_place_url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
     radius = 500
 
-    loc = "#{goog_place_url}?location=#{latitude},#{longitude}&radius=#{radius}&types=grocery_or_supermarket&sensor=false&key=#{GOOGLE_CONFIG['api_key']}"
-    puts '===== Place API URI ======'
-    puts loc
-    puts '=========================='
-    url = URI.parse(loc);
-
-    content = open(loc).read
-
-    places = JSON.load(content)
-
     place_array = []
 
-    places['results'].each do |r|
-      hash = {:latitude => r['geometry']['location']['lat'], 
-              :longitude => r['geometry']['location']['lng'],
-              :name => r['name']}
-      place_array.push(hash)
+    Reminder.uniq.pluck(:category).each do |c|
+
+      loc = "#{goog_place_url}?location=#{latitude},#{longitude}&radius=#{radius}&types=#{c}&sensor=false&key=#{GOOGLE_CONFIG['api_key']}"
+      puts '===== Place API URI ======'
+      puts loc
+      puts '=========================='
+      url = URI.parse(loc);
+
+      content = open(loc).read
+
+      places = JSON.load(content)
+      
+      places['results'].each do |r|
+        hash = {:latitude => r['geometry']['location']['lat'], 
+                :longitude => r['geometry']['location']['lng'],
+                :name => r['name']}
+        place_array.push(hash)
+      end
     end
 
     puts place_array.to_json

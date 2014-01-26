@@ -37,6 +37,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '1.4.0'
 
 gem 'hirb'
